@@ -1,0 +1,228 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  border: 1px solid rgb(155, 158, 158);
+  max-height: max-content;
+  aspect-ratio: 16/9;
+}
+@media (max-width: 565px) {
+  .App .mainContent .price {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 828px) {
+  .detail .building {
+    width: 40px;
+    height: 40px;
+  }
+  .detail h1 {
+    font-size: 1.3rem;
+  }
+  .price .display {
+    font-size: 1.3rem;
+  }
+  .sum p {
+    font-size: 1.2rem;
+  }
+  .ket .address,
+  .price .priceDet {
+    font-size: medium;
+  }
+}
+/* media queries start */
+@media (max-width: 325px) {
+  .App .mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 10px;
+    gap: 5px;
+  }
+  .App .mainContent .detail,
+  .price {
+    width: 100%;
+    margin: 0;
+    gap: 10px;
+  }
+  .App .mainContent .price {
+    display: flex;
+    flex-direction: row;
+  }
+  .detail .building {
+    width: 40px;
+    height: 40px;
+  }
+  .detail h1 {
+    font-size: 1.2rem;
+  }
+  .ket .address,
+  .price .priceDet {
+    font-size: small;
+  }
+  .detail .sum {
+    margin: 0;
+  }
+  .sum p {
+    font-size: medium;
+  }
+  .price .display {
+    font-size: 1rem;
+  }
+  .App .seedes {
+    font-size: 1rem;
+  }
+  .App .dsctn {
+    margin: 0;
+  }
+  .App .dsctn p {
+    font-size: smaller;
+    margin-left: 15px;
+  }
+}
+
+/* media queries end */
+/* pic styling start */
+.mainPic {
+  width: 100%;
+  position: relative;
+}
+.icon {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  top: 1rem;
+  left: 0;
+  margin-left: 5px;
+  width: 100%;
+  height: 350px;
+  z-index: 1;
+}
+.Pic {
+  width: 100%;
+  z-index: 0;
+  height: 350px;
+}
+/* pic styling end */
+/* main content styling start */
+.mainContent {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  grid-gap: 10px;
+  margin: 20px 30px 0 30px;
+}
+
+.detail {
+  grid-column: span 1;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.price {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 4rem;
+}
+
+/* detail attributes */
+.building {
+  width: 60px;
+  height: 50px;
+  margin-top: 0;
+}
+.ket {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+h1 {
+  font-size: 2rem;
+  color: rgb(27, 27, 83);
+  margin-bottom: 5px;
+}
+.address {
+  margin-top: 5px;
+}
+/* summarize attributes */
+.sum {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 25px;
+}
+/* price attributes */
+.display {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: rgb(27, 27, 83);
+  margin-bottom: 5px;
+}
+/* smaller text styling */
+.address,
+.priceDet {
+  color: rgb(163, 163, 163);
+  font-size: 1.2rem;
+}
+.priceDet {
+  margin-top: 2px;
+}
+.type,
+.available {
+  font-size: 1.5rem;
+  color: rgb(22, 22, 87);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.seedes {
+  width: auto;
+  color: #0287e4;
+  background: none;
+  font-size: 1.2rem;
+  border: none;
+  display: flex;
+  margin-left: auto;
+  margin-right: 1.5rem;
+}
+button.prev,
+button.next {
+  display: none;
+  position: absolute;
+  top: 20%;
+  transform: translateY(-20%);
+  color: white;
+  border: none;
+  padding: 10px;
+  background: none;
+  font-size: 80px;
+  cursor: pointer;
+  z-index: 1;
+}
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+.mainpic:hover button.prev,
+.mainpic:hover button.next {
+  display: block;
+}
+.dsctn {
+  width: 98%;
+  border: 2px solid rgb(155, 158, 158);
+  margin: 30px 10px 10px 10px;
+}
+.description {
+  text-align: left;
+  margin-left: 30px;
+}
+/* main content styling end */
